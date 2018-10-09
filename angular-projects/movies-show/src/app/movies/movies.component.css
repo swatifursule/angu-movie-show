@@ -1,0 +1,32 @@
+.item {
+  width: 50px;
+  height: 100px;
+  width: 100%;
+  margin: 8px;
+}
+
+
+
+@media (min-width: 768px) {
+  .list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .item {
+    width: calc(50% - 16px);
+  }
+}
+
+
+@media (min-width: 1200px) {
+  .list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .item {
+    width: calc(25% - 16px);
+  }
+}
+
+
+

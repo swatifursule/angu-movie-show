@@ -1,0 +1,15 @@
+
+/* Container holding the image and the text */
+.imgcontainer {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+/* Bottom left text */
+.heading {
+  position: absolute;
+  top: 40%;
+  left: 10%;
+  color: black;
+}

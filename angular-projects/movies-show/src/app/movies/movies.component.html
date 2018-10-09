@@ -1,0 +1,46 @@
+
+<div class="container">
+  <div class = "row">
+    <div class="col-xs-3"></div>
+    <div class="col-xs-6">
+      <input type="text" class="form-control" placeholder="Search" [(ngModel)]="searchField">
+    </div>
+  </div>
+<br><br>
+  <!-- <div class="row">
+    <div class="col-md-12">
+      <div class="panel panel-default">
+        <div class="panel-heading">Movies</div>
+        <table class="table">
+          <thead>
+          <tr>
+            <th></th>
+            <th sortable-column="firstname">Name</th>
+            <th>Genre</th>
+            <th>Summary</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let movie of movies | filter : searchField  ">
+            <td><img class="img-responsive"  src="../../assets/images/{{movie.image}}"></td>
+            <td>{{ movie.name }}</td>
+            <td>{{ movie.genre }}</td>
+            <td>{{ movie.summary }}</td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div> -->
+
+  <div class="list">
+    <div *ngFor="let movie of movies | fieldsort:'name' | filter : searchField; let ind=index" class="item">
+      <table class="table">
+        <tr>
+          <td style="width: 50%"><img class="img-responsive"  src="../../assets/images/{{movie.image}}" (click)="getDetail(movie)"></td>
+          <td style="width: 50%;"> {{ind+1}} {{ movie.name }}</td>
+        </tr>
+      </table>
+      </div>
+  </div>
+</div>
